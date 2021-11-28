@@ -2,5 +2,6 @@
 
 {% block body %}
   <h1>{{ idea.name }}</h1>
+  <p>{{ idea.description }}</p>
   <a href="{% url 'ideas:index' %}">View All Ideas</a>
 {% endblock %}

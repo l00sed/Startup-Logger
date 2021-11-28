@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-from .default_settings import ADDITIONAL_APPS, ADDITIONAL_MIDDLEWARE, STATIC_ROOT, STATICFILES_DIRS, TEMPLATE_BASE
+from .default_settings import ADDITIONAL_APPS, ADDITIONAL_MIDDLEWARE, CRISPY_TEMPLATE_PACK, STATIC_ROOT, STATICFILES_DIRS, TEMPLATE_BASE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

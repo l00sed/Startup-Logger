@@ -7,7 +7,8 @@ from .models import Idea
 
 
 class NewIdeaForm(forms.Form):
-    idea = forms.CharField(label="New Idea")
+    idea_name = forms.CharField(label="New Idea")
+    idea_description = forms.CharField(widget=forms.Textarea)
 
 
 # Create your views here.
@@ -26,8 +27,9 @@ def add(request):
     if request.method == "POST":
         form = NewIdeaForm(request.POST)
         if form.is_valid():
-            idea = form.cleaned_data["idea"]
-            idea = Idea(name=idea)
+            idea_name = form.cleaned_data["idea_name"]
+            idea_description = form.cleaned_data["idea_description"]
+            idea = Idea(name=idea_name, description=idea_description)
             idea.save()
             return HttpResponseRedirect(reverse("ideas:index"))
         else:

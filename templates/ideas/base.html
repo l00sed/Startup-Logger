@@ -7,10 +7,23 @@
     <meta name="description" content="-->-->-->TODO" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    {# Load the tag library #}
+    {% load bootstrap3 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+
   </head>
   <body>
-    {% block body %}
-    {% endblock %}
+    <div class="container-fluid">
+      {% block body %}
+      {% endblock %}
+    </div>
   </body>
 </html>
 
