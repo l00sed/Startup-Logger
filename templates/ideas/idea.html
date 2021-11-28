@@ -1,0 +1,6 @@
+{% extends "ideas/base.html" %}
+
+{% block body %}
+  <h1>{{ idea.name }}</h1>
+  <a href="{% url 'ideas:index' %}">View All Ideas</a>
+{% endblock %}

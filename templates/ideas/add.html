@@ -1,0 +1,11 @@
+{% extends "ideas/base.html" %}
+
+{% block body %}
+  <h1>Add Idea</h1>
+  <form action="{% url 'ideas:add' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+  </form>
+  <a href="{% url 'ideas:index' %}">View Ideas</a>
+{% endblock %}
