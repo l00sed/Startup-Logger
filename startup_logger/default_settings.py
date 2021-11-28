@@ -6,7 +6,7 @@ ADDITIONAL_APPS = [
     'ideas',
     'livereload',
     'crispy_forms',
-    'bootstrap3',
+    'bootstrap4',
 ]
 ADDITIONAL_MIDDLEWARE = [
     'livereload.middleware.LiveReloadScript',
@@ -16,4 +16,4 @@ TEMPLATE_BASE = [
 ]
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
